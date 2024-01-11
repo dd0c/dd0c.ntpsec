@@ -1,0 +1,14 @@
+---
+
+- name: Set timezone for server
+  community.general.timezone:
+    name: "{{ settimezoneto }}"
+
+- name: Install a list of packages on behalf of ntpsec
+  ansible.builtin.apt:
+    pkg:
+    - ntpsec
+    autoremove: yes
+    purge: true
+
+...
