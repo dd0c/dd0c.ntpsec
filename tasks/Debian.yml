@@ -14,6 +14,7 @@
 - name: Make sure service unit ntpsec is running
   ansible.builtin.systemd_service:
     state: started
+    enabled: true
     name: ntpsec
 
 ...
