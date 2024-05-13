@@ -11,4 +11,9 @@
     autoremove: yes
     purge: true
 
+- name: Make sure service unit ntpsec is running
+  ansible.builtin.systemd_service:
+    state: started
+    name: ntpsec
+
 ...
