@@ -11,6 +11,14 @@
     autoremove: yes
     purge: true
 
+- name: Template a file to /etc/ntpsec/ntp.conf
+  ansible.builtin.template:
+    src: templates/etc/ntpsec/ntp.conf.j2
+    dest: /etc/ntpsec/ntp.conf
+    owner: root
+    group: root
+    mode: '0644'
+
 - name: Make sure service unit ntpsec is enabled and running
   ansible.builtin.systemd_service:
     state: started
