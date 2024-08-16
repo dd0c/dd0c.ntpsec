@@ -38,9 +38,9 @@ tos minclock 4 minsane 3
 #pool 3.debian.pool.ntp.org iburst
 
 # Hetzner time servers
-server ntp1.hetzner.de iburst
-server ntp2.hetzner.com iburst
-server ntp3.hetzner.net iburst
+server {{ server1 }} iburst
+server {{ server2 }} iburst
+server {{ server3 }} iburst
 
 # Access control configuration; see /usr/share/doc/ntpsec-doc/html/accopt.html
 # for details.
